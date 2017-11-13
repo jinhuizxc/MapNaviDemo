@@ -17,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src/main/java', 'src/main/java-gen']
+        }
+    }
+
 }
 
 dependencies {
@@ -27,4 +35,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    // 配置greendao
+    compile 'de.greenrobot:greendao:2.0.0'
+    // 讯飞语音
+
+    // 高德
+
 }
