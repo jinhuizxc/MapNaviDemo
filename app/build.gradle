@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -38,7 +38,7 @@ dependencies {
     // 配置greendao
     compile 'de.greenrobot:greendao:2.0.0'
     // 讯飞语音
-
     // 高德
-
+    compile files('libs/AMap3DMap_5.5.0_AMapNavi_5.4.0_20171107.jar')
+    compile files('libs/AMap_Location_V3.6.1_20171012.jar')
 }
